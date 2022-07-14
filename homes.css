@@ -1,0 +1,342 @@
+:root{
+  --orange:#e67e22;
+  --black:#333;
+  --light-color:#777;
+  --border: 0.2rem solid rgba(0,0,0,0.1);
+  --box-shadow:0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline:none;
+  border: none;
+  text-decoration: none;
+}
+html{
+  font-size: 50.5%
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+section{
+  padding: 1.5rem 6%;
+}
+.btn{
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: black;
+  color: #FFF;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn:hover{
+  background: orange;
+}
+.header{
+  position: fixed;
+  top:0; right:0; left:0;
+  z-index: 1000;
+  background: #FFF;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 7%;
+}
+.header .log{
+color: var(--black);
+font-size: 1.7rem;
+margin-right: auto;
+}
+.header .log span{
+  color: var(--orange);
+}
+.header .nav a{
+  color: var(--light-color);
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.header .nav a:hover{
+  color:orange;
+}
+.header .icon i{
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  color: black;
+  background: #EEE;
+  border-radius: 50%;
+  margin-left: 0.7rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.header .icon i:hover{
+  color: #FFF;
+  background: orange;
+}
+.header .search{
+  position: absolute;
+  background: #FFF;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  display: none;
+  top:110%;right:7%;
+  height: 3rem;
+  width:30rem;
+  padding: 0.5rem;
+}
+.header .search.active{
+  display:flex;
+}
+.header .search #searchbox{
+  width: 100%;
+  border:var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: black;
+  height: 100%;
+}
+.header .search label{
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  color: black;
+}
+.header .search label:hover{
+  color: orange;
+}
+#menu{
+  display: none;
+}
+.home{
+  min-height: 100vh;
+  background: url(image_4.png) no-repeat;
+  background-position:center;
+  background-size:cover;
+  display: grid;
+  place-items:center;
+  padding: 8rem;
+}
+.home .content{
+    text-align: center;
+    background: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    max-width: 50rem;
+}
+.home .content h3{
+  font-size: 2.5rem;
+  color:black;
+  text-transform: uppercase;
+}
+.home .content p{
+  font-size: 1rem;
+  color:var(--light-color);
+  padding: 1rem 0;
+  line-height: 0.8;
+}
+.container{
+  font-size: 1.5rem;
+  padding:2rem;
+  text-align: center;
+}
+.container h2{
+   text-decoration: underline;
+   color:orange;
+}
+.container p{
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 2rem;
+}
+.contact{
+  background: url(download.jfif) no-repeat;
+  background-position:center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+.contact h2{
+  text-decoration: underline;
+  color:orange;
+}
+.contact p{
+  font-size: 1.3rem;
+  color:white;
+}
+.contact form{
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+.contact form .inputbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .inputbox input,
+.contact form textarea{
+  width:100%;
+  background: #EEE;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border-radius: 0.5rem;
+  color:black;
+  font-size: 1.2rem;
+}
+.contact form .inputbox input{
+width: 45%
+}
+.posts{
+  padding-top: 8rem;
+  padding-left: 10rem;
+  padding-right:10rem;
+  display: grid;
+  gap:1rem;
+  background: black;
+}
+.posts h2{
+  color:orange;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.posts .postcontainer .post{
+  width: 100%;
+  padding: 2rem;
+  background: #FFF;
+  border: var(--border);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.posts .postcontainer .post .image{
+  height:20rem;
+  width:100%;
+  border-radius:0.5rem;
+  object-fit: cover;
+}
+.posts .postcontainer .post .date{
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  color:orange;
+
+}
+.posts .postcontainer .post .title{
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  color:black;
+}
+.posts .postcontainer .post .text{
+  color: var(--light-color);
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 1rem 0;
+}
+.posts .postcontainer .links{
+  border-top: var(--border);
+  margin-top: 0.2rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.create{
+  padding-top: 6rem;
+  min-height: 90vh;
+  background: url(mobile_wallpaper_by_maria_shanina-min.png) no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+.create h2{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+ .create form{
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+.create form input,
+.create form textarea{
+  border: 1px solid black;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+  html{
+    font-size: 40.5%
+}
+.header{
+  padding:1.5rem;
+}
+section{
+  padding: 1.5rem;
+}
+
+}
+@media (max-width:768px){
+  #menu{
+    display: inline-block;
+  }
+  .header .nav{
+    position: absolute;
+    top: 100%;
+    left:0;
+    right:0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background: #FFF;
+    display: none;
+  }
+  .header .nav.active{
+    display: block;
+  }
+  .header .search{
+    position: absolute;
+    top: 100%;
+    left:0;
+    right:0;
+    border-top: var(--border);
+    width: 100%
+    border-radius:0;
+  }
+  .header .nav a{
+    display: block;
+    background: #f7f7f7;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+    border: var(--border)
+  }
+}
+@media (max-width:450px){
+  html{
+    font-size: 36.5%
+  }
+  .contact form .inputbox input{
+    width: 100%
+  }
+}
